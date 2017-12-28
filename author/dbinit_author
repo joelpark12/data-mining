@@ -1,0 +1,16 @@
+drop table train;
+CREATE TABLE train
+(
+    id character varying(10),
+    text character varying(5000),
+    author character varying(3)
+);
+drop table test;
+CREATE TABLE test
+(
+    id character varying(10),
+    text character varying(5000)
+);
+COPY train FROM '/Users/joelpark/Documents/B565/project/author/train.csv' CSV HEADER Null 'NA';
+COPY test FROM '/Users/joelpark/Documents/B565/project/author/test.csv' CSV HEADER Null 'NA';
+select * from train;
